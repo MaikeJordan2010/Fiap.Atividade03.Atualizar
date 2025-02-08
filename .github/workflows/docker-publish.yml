@@ -31,6 +31,6 @@ jobs:
       uses: docker/login-action@v3.3.0
       with:
         username: 'maikejordan2010'
-        password: ${{ TOKEN_DOCKER_HUB }}
+        password: ${TOKEN_DOCKER_HUB}
 
              
