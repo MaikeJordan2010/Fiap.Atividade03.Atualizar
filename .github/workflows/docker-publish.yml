@@ -33,4 +33,13 @@ jobs:
         username: 'maikejordan2010'
         password: ${{ secrets.TOKEN_DOCKER_HUB }}
 
+    - name: Build and push Docker images
+  # You may pin to the exact commit or the version.
+  # uses: docker/build-push-action@ca877d9245402d1537745e0e356eab47c3520991
+      uses: docker/build-push-action@v6.13.0
+      with:
+        context: .
+        tags: 'v1'
+        push: true
+          
              
