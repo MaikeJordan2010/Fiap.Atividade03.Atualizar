@@ -39,7 +39,7 @@ jobs:
       uses: docker/build-push-action@v6.13.0
       with:
         context: .
-        tags: 'v1'
+        tags: 'maikejordan2010/fiap.atividade03.atualizar:v1'
         push: true
           
              
