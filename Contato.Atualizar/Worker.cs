@@ -29,10 +29,10 @@ namespace Contato.Atualizar
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            try {
+            while (true)
+            {
+                try {
 
-                while (true)
-                {
                     using var connection = await _factory.CreateConnectionAsync();
                     using (var channel = await connection.CreateChannelAsync())
                     {
@@ -70,10 +70,10 @@ namespace Contato.Atualizar
                         }
                     }
                 }
-            }
-            catch (Exception ex) { 
-                Console.WriteLine(ex.ToString());
-                Thread.Sleep(1000);
+                catch (Exception ex) { 
+                    Console.WriteLine(ex.ToString());
+                    Thread.Sleep(1000);
+                }
             }
         }
     }
