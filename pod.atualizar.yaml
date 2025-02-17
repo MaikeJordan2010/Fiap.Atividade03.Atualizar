@@ -1,0 +1,21 @@
+apiVersion: v1
+kind : Pod
+metadata:
+  name: atualizar
+  labels:
+    app: atualizar
+spec:
+  containers:
+  - name: servicoatualizar
+    image: maikejordan2010/fiap.atividade03.atualizar:v1
+    env:
+      - name: CONNECTION_STRING
+        value: Server=host.docker.internal,52291;Database=FIAP_Atividade03;User Id=sa;password=123456;Encrypt=False
+      - name: ENDERECO
+        value: host.docker.internal
+      - name: PORTA
+        value: "5672"
+      - name: USUARIO
+        value: guest
+      - name: SENHA
+        value: guest
