@@ -50,6 +50,7 @@ namespace Contato.Atualizar
                                 byte[] body = resp.Body.ToArray();
                                 var message = Encoding.UTF8.GetString(body);
 
+
                                 if (string.IsNullOrEmpty(message))
                                     await Task.CompletedTask;
 
